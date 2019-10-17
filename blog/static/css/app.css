@@ -1,0 +1,274 @@
+/******************************************
+GENERAL
+*******************************************/
+
+.wrap{
+	width:90%;
+	margin: 0 auto;
+	max-width: 1100px;
+}
+
+/*******************************************
+NAV
+********************************************/
+
+
+p{
+ color:#fff;
+ font-weight: 300;
+ letter-spacing: 1.5px;
+
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color:#222;
+    color:#fff;
+    font-family:Lato;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.top-menu-edit{
+    width:200px;
+    height:300px;
+}
+.page-header {
+    position: fixed;
+    background-color: #ff9400;
+    display: flex;
+    width: 100vw;
+    font-weight: 300;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header h3 {
+    padding: 0 20px 0 20px;
+    margin-top: 8px;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.date {
+    color:#828282;
+}
+
+.save {
+    float: right;
+}
+
+input {
+    color: #222;
+}
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+}
+
+.top-menu li a {
+    margin: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #222;
+    border-bottom: 1px solid #ff9400;
+    transition: all .3s ease-in;
+}
+.top-menu li a:hover {
+    border-bottom-color: #222;
+}
+
+label {
+    color: #fff;
+}
+/*.top-menu a:hover, .top-menu:visited {
+/    text-decoration: underline
+}*/
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1, .post h1 a:visited {
+    color: #FF9400;
+}
+/*******************************************
+HERO
+********************************************/
+.hero{
+	background-color: #999;
+	padding: 80px 0px; 
+	height: 400px;
+
+}
+
+.button.success{
+	background-color: #FF9400;
+}
+
+
+
+
+
+
+
+/*******************************************
+MAIN CONTENT
+********************************************/
+
+.main{	
+	padding: 80px 0px;	
+
+}
+
+
+
+/* menu */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+ .nav a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #222;
+    transition: all .5s ease-in;
+
+}
+.nav a:hover {
+    color: #fff;
+    border-bottom-color: #2408db;
+}
+i {
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 887px) {
+    .extendable-navigation {
+        display: none;
+    }
+    .main-content {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    nav {
+        justify-content: space-around;
+    }
+    p {
+        font-size: 20px;
+    }
+
+}
+
+#mini-nav {
+    display: none;
+}
+
+.extendable-navigation a {
+    font-size: 16px;
+}
+
+.extendable-navigation {
+    display: none;
+    height: 0;
+    transition: height .5s;
+    flex-basis: 886px;
+}
+
+.side-nav {
+    list-style: none;
+}
+
+.toggled {
+    display: unset;
+    height: 120px;
+}
+
+@media screen and (max-width: 886px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    #mini-nav {
+        display: unset;
+    }
+    .top-menu {
+        display: none;
+    }
+    p {
+        font-size: 14px;
+    }
+    footer {
+        display: none;
+    }
+
+
+}
+
+
+
+/*******************************************
+FOTTER
+********************************************/
+footer{
+    position: fixed;
+    font-size: 18px;
+    font-weight: 300;
+    width: 100%;
+    bottom: 0;
+    padding: 0 20px 10px 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/**** main content section ****/
+.main-content {
+    flex-direction: row;
+    justify-content: center;
+}
+.main-content .posts {
+    flex-basis: 800px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.comment-btn {
+    padding: 12px;
+    border-radius: 2px;
+    background-color: #ff9400;
+}
+::placeholder {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.post-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.post-content {
+    margin-top: 8px;
+}

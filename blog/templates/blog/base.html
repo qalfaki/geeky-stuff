@@ -1,0 +1,68 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+   
+</head>
+
+<body>
+    <section class="page-header">
+        <h3>Tech blog</h3>
+        <nav class="nav top-menu">
+            <a href="/">BLOGS <i class="fas fa-home"></i></a>
+            <a href="https://qalfaki.github.io/q/#/" target="_blank">ABOUT <i class="fas fa-question"></i></a>
+            <a href="https://qalfaki.github.io/q/#/contact" target="_blank">CONTACTS <i class="fas fa-envelope"></i></a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}"><span>new post</a>
+            {% endif %}
+            <input placeholder="search...">
+            <a href="#"><i class="fas fa-search"></i></a>
+        </nav>
+        <i id="mini-nav" class="fa fa-bars"></i>
+        <div class="nav extendable-navigation">
+            <ul class="side-nav">
+                <li class="">
+                    <a href="/">BLOGS <i class="fas fa-home"></i></a>
+                </li>
+                <li class="">
+                    <a href="https://qalfaki.github.io/q/#/" target="_blank">ABOUT <i class="fas fa-question"></i></a>
+                </li>
+                <li class="">
+                    <a href="https://qalfaki.github.io/q/#/contact" target="_blank">CONTACTS <i class="fas fa-envelope"></i></a>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="">
+                        <a href="{% url 'post_new' %}"><span>new post</a>
+                    </li>
+                {% endif %}
+                <li class="">
+                    <input placeholder="search...">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+    <section class="main-content">
+        <article class="posts">
+            {% block content %}
+            {% endblock %}
+        </article>
+        <!--<aside>some content will com here</aside>-->
+    </section>
+    <footer>
+        <small>© copyrights 2019 reveresed</small>
+    </footer>
+    <script src="{% static 'js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+
+</html>
