@@ -17,7 +17,7 @@ p{
  color:#fff;
  font-weight: 300;
  letter-spacing: 1.5px;
-
+ margin: 0;
 }
 
 body{
@@ -176,6 +176,9 @@ i {
     p {
         font-size: 20px;
     }
+    .main-content {
+        margin-top: 100px;
+    }
 
 }
 
@@ -220,8 +223,6 @@ i {
     footer {
         display: none;
     }
-
-
 }
 
 
@@ -255,9 +256,25 @@ section {
     padding-right: 20px;
 }
 .comment-btn {
-    padding: 12px;
+    padding: 10px;
     border-radius: 2px;
     background-color: #ff9400;
+    letter-spacing: 1.1px;
+    color:#222;
+    font-weight: 300;
+    float: right;
+    transition: all .2s;
+}
+.comment-btn:hover {
+    padding: 12px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:active {
+    transform: scale(0.99);
 }
 ::placeholder {
     font-size: 18px;
@@ -271,4 +288,17 @@ section {
 }
 .post-content {
     margin-top: 8px;
+}
+
+#comment-input {
+  margin-top: 40px;
+  background-color: #ccc;
+}
+
+.responses {
+    float: right;
+}
+.responses a {
+    font-size: 12px;
+    color: #ccc;
 }

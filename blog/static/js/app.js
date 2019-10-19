@@ -15,6 +15,9 @@ const textLengthShortner = function () {
             let newStr = innertEl.text().substr(0, 400);
             innertEl.text('').append(`${newStr}...<a href="/posts/${innertEl[0].id}/">Read more</a>`);
         }
+        else {
+            innertEl.append(`...<a href="/posts/${innertEl[0].id}/">Read more</a>`);
+        }
     }).get()
 }
 
