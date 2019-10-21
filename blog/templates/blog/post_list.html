@@ -11,8 +11,8 @@
             </div>
             <p id="{{post.pk}}" class="post-content">{{ post.text|linebreaksbr }}</p>
             <span class="responses">
-                <a href="{% url 'post_detail' pk=post.pk%}"><i class="fas
-                        fa-comments"></i>2231</a>
+                <a href="{% url 'post_detail' pk=post.pk%}">
+                    <i class="fas fa-comments"></i><span id="nc-{{post.pk}}"></span></a>
             </span>
         </div>
 {% endfor %}
